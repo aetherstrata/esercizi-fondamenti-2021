@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="ProgrammiAula" Database="" Version="10000">
+  <Project Name="PrimaProva" Path="PrimaProva/PrimaProva.project" Active="No"/>
+  <Project Name="test" Path="test/test.project" Active="No"/>
+  <Project Name="Raddoppiatore" Path="Raddoppiatore/Raddoppiatore.project" Active="No"/>
+  <Project Name="AreaRettangolo" Path="AreaRettangolo/AreaRettangolo.project" Active="No"/>
+  <Project Name="RisolviEquazioni" Path="RisolviEquazioni/RisolviEquazioni.project" Active="No"/>
+  <Project Name="Segno" Path="Segno/Segno.project" Active="No"/>
+  <Project Name="AnnoBisestile" Path="AnnoBisestile/AnnoBisestile.project" Active="No"/>
+  <Project Name="DuplicatoreCorretto" Path="DuplicatoreCorretto/DuplicatoreCorretto.project" Active="No"/>
+  <Project Name="Divisore" Path="Divisore/Divisore.project" Active="No"/>
+  <Project Name="Calcoli" Path="Calcoli/Calcoli.project" Active="No"/>
+  <Project Name="OperatoriRelazionali" Path="OperatoriRelazionali/OperatoriRelazionali.project" Active="No"/>
+  <Project Name="EspressioniBool" Path="EspressioniBool/EspressioniBool.project" Active="No"/>
+  <Project Name="VerificaTriangolo" Path="VerificaTriangolo/VerificaTriangolo.project" Active="No"/>
+  <Project Name="TavolaLogica" Path="TavolaLogica/TavolaLogica.project" Active="No"/>
+  <Project Name="SemplificaBool" Path="SemplificaBool/SemplificaBool.project" Active="No"/>
+  <Project Name="MetodoEuclide" Path="MetodoEuclide/MetodoEuclide.project" Active="No"/>
+  <Project Name="Fattoriale" Path="Fattoriale/Fattoriale.project" Active="No"/>
+  <Project Name="TreNumeri" Path="TreNumeri/TreNumeri.project" Active="No"/>
+  <Project Name="ComparaNumeri" Path="ComparaNumeri/ComparaNumeri.project" Active="No"/>
+  <Project Name="EstremiInsieme" Path="EstremiInsieme/EstremiInsieme.project" Active="No"/>
+  <Project Name="Media" Path="Media/Media.project" Active="No"/>
+  <Project Name="Fibonacci" Path="Fibonacci/Fibonacci.project" Active="No"/>
+  <Project Name="MCD" Path="MCD/MCD.project" Active="No"/>
+  <Project Name="isQuadrato" Path="isQuadrato/isQuadrato.project" Active="No"/>
+  <Project Name="ContaOccorrenze" Path="ContaOccorrenze/ContaOccorrenze.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="PrimaProva" ConfigName="Debug"/>
+      <Project Name="test" ConfigName="Debug"/>
+      <Project Name="Raddoppiatore" ConfigName="Debug"/>
+      <Project Name="AreaRettangolo" ConfigName="Debug"/>
+      <Project Name="RisolviEquazioni" ConfigName="Debug"/>
+      <Project Name="Segno" ConfigName="Debug"/>
+      <Project Name="AnnoBisestile" ConfigName="Debug"/>
+      <Project Name="DuplicatoreCorretto" ConfigName="Debug"/>
+      <Project Name="Divisore" ConfigName="Debug"/>
+      <Project Name="Calcoli" ConfigName="Debug"/>
+      <Project Name="OperatoriRelazionali" ConfigName="Debug"/>
+      <Project Name="EspressioniBool" ConfigName="Debug"/>
+      <Project Name="VerificaTriangolo" ConfigName="Debug"/>
+      <Project Name="TavolaLogica" ConfigName="Debug"/>
+      <Project Name="SemplificaBool" ConfigName="Debug"/>
+      <Project Name="MetodoEuclide" ConfigName="Debug"/>
+      <Project Name="Fattoriale" ConfigName="Debug"/>
+      <Project Name="TreNumeri" ConfigName="Debug"/>
+      <Project Name="ComparaNumeri" ConfigName="Debug"/>
+      <Project Name="EstremiInsieme" ConfigName="Debug"/>
+      <Project Name="Media" ConfigName="Debug"/>
+      <Project Name="Fibonacci" ConfigName="Debug"/>
+      <Project Name="MCD" ConfigName="Debug"/>
+      <Project Name="isQuadrato" ConfigName="Debug"/>
+      <Project Name="ContaOccorrenze" ConfigName="Debug"/>
+      <Project Name="Kefa" ConfigName="Debug"/>
+      <Project Name="Kefa" ConfigName="Debug"/>
+      <Project Name="IndovinaNumero" ConfigName="Debug"/>
+      <Project Name="Calcolatrice" ConfigName="Debug"/>
+      <Project Name="ValoriAssoluti" ConfigName="Debug"/>
+      <Project Name="MatriceTrasposta" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="PrimaProva" ConfigName="Release"/>
+      <Project Name="test" ConfigName="Release"/>
+      <Project Name="Raddoppiatore" ConfigName="Release"/>
+      <Project Name="AreaRettangolo" ConfigName="Release"/>
+      <Project Name="RisolviEquazioni" ConfigName="Release"/>
+      <Project Name="Segno" ConfigName="Release"/>
+      <Project Name="AnnoBisestile" ConfigName="Release"/>
+      <Project Name="DuplicatoreCorretto" ConfigName="Release"/>
+      <Project Name="Divisore" ConfigName="Release"/>
+      <Project Name="Calcoli" ConfigName="Release"/>
+      <Project Name="OperatoriRelazionali" ConfigName="Release"/>
+      <Project Name="EspressioniBool" ConfigName="Release"/>
+      <Project Name="VerificaTriangolo" ConfigName="Release"/>
+      <Project Name="TavolaLogica" ConfigName="Release"/>
+      <Project Name="SemplificaBool" ConfigName="Release"/>
+      <Project Name="MetodoEuclide" ConfigName="Release"/>
+      <Project Name="Fattoriale" ConfigName="Release"/>
+      <Project Name="TreNumeri" ConfigName="Release"/>
+      <Project Name="ComparaNumeri" ConfigName="Release"/>
+      <Project Name="EstremiInsieme" ConfigName="Release"/>
+      <Project Name="Media" ConfigName="Release"/>
+      <Project Name="Fibonacci" ConfigName="Release"/>
+      <Project Name="MCD" ConfigName="Release"/>
+      <Project Name="isQuadrato" ConfigName="Release"/>
+      <Project Name="ContaOccorrenze" ConfigName="Release"/>
+      <Project Name="Kefa" ConfigName="Release"/>
+      <Project Name="Kefa" ConfigName="Release"/>
+      <Project Name="IndovinaNumero" ConfigName="Release"/>
+      <Project Name="Calcolatrice" ConfigName="Release"/>
+      <Project Name="ValoriAssoluti" ConfigName="Release"/>
+      <Project Name="MatriceTrasposta" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

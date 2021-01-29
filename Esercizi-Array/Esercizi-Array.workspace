@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Esercizi-Array" Database="" Version="10000">
+  <Project Name="201701A" Path="201701A/201701A.project" Active="No"/>
+  <Project Name="201701B" Path="201701B/201701B.project" Active="No"/>
+  <Project Name="201701C" Path="201701C/201701C.project" Active="No"/>
+  <Project Name="201701D" Path="201701D/201701D.project" Active="No"/>
+  <Project Name="201801A" Path="201801A/201801A.project" Active="No"/>
+  <Project Name="201801B" Path="201801B/201801B.project" Active="No"/>
+  <Project Name="201801C" Path="201801C/201801C.project" Active="No"/>
+  <Project Name="201801D" Path="201801D/201801D.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="2017-01-A" ConfigName="Debug"/>
+      <Project Name="2017-01-A" ConfigName="Debug"/>
+      <Project Name="201701A" ConfigName="Debug"/>
+      <Project Name="201701B" ConfigName="Debug"/>
+      <Project Name="201701C" ConfigName="Debug"/>
+      <Project Name="201701D" ConfigName="Debug"/>
+      <Project Name="201801A" ConfigName="Debug"/>
+      <Project Name="201801B" ConfigName="Debug"/>
+      <Project Name="201801C" ConfigName="Debug"/>
+      <Project Name="201801D" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="2017-01-A" ConfigName="Release"/>
+      <Project Name="2017-01-A" ConfigName="Release"/>
+      <Project Name="201701A" ConfigName="Release"/>
+      <Project Name="201701B" ConfigName="Release"/>
+      <Project Name="201701C" ConfigName="Release"/>
+      <Project Name="201701D" ConfigName="Release"/>
+      <Project Name="201801A" ConfigName="Release"/>
+      <Project Name="201801B" ConfigName="Release"/>
+      <Project Name="201801C" ConfigName="Release"/>
+      <Project Name="201801D" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
