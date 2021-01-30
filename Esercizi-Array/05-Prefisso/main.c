@@ -38,9 +38,9 @@ int main(int argc, char **argv)
 	}
 	
 	while(lunghezza1>lunghezza2){
-	printf("La seconda sequenza di interi deve essere pi%c lunga della prima!\n", 151);
-	printf("Da quanti numeri %c composta la seconda sequenza di interi?\n", 138);
-	scanf("%d", &lunghezza2);
+		printf("La seconda sequenza di interi deve essere pi%c lunga della prima!\n", 151);
+		printf("Da quanti numeri %c composta la seconda sequenza di interi?\n", 138);
+		scanf("%d", &lunghezza2);
 	}
 	
 	int array2[lunghezza2];
