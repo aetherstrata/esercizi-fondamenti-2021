@@ -1,9 +1,9 @@
 /* SPECIFICA * 
  * Input: sequenza s di interi / sequenza t di interi / lunghezze  l1 e l2* 
  * Pre-condizione: l1 e l2 sono le lunghezze di s e t / * 
- * Output: .... * 
- * Post-condizione: ... *
- * TIPO DI PROBLEMA: ... */
+ * Output: true/false * 
+ * Post-condizione: true se s è un prefisso di t, false altrimenti *
+ * TIPO DI PROBLEMA: verifica universale */
 
 #include <stdio.h>
 
