@@ -19,9 +19,17 @@ int doppiaStringa(char str[]){
 
 void testDoppiaStringa(){
 	
-	int str1[1];
-	str1[0]='\0';
+	char str1[]="";
+	printf("Test doppiaStringa(\"\"): Atteso = 1, Calcolato = %d \n", doppiaStringa(str1));
 	
+	char str2[]="abcba";
+	printf("Test doppiaStringa(\"abcba\"): Atteso = 0, Calcolato = %d \n", doppiaStringa(str2));
+	
+	char str3[]="abacaba";
+	printf("Test doppiaStringa(\"abcaba\"): Atteso = 0, Calcolato = %d \n", doppiaStringa(str3));
+	
+	char str4[]="popipopi";
+	printf("Test doppiaStringa(\"popipopi\"): Atteso = 1, Calcolato = %d \n", doppiaStringa(str4));
 }
 
 int main(int argc, char **argv)
