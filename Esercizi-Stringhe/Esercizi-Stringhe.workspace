@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Workspace Name="Esercizi-Stringhe" Database="" Version="10000"/>
+<CodeLite_Workspace Name="Esercizi-Stringhe" Database="" Version="10000">
+  <Project Name="01-DoppiaStringa" Path="01-DoppiaStringa/01-DoppiaStringa.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="01-DoppiaStringa" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="01-DoppiaStringa" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
