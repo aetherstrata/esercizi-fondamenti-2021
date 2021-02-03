@@ -3,23 +3,31 @@
   <Project Name="01-DoppiaStringa" Path="01-DoppiaStringa/01-DoppiaStringa.project" Active="No"/>
   <Project Name="02-DifferenzaNumerici" Path="02-DifferenzaNumerici/02-DifferenzaNumerici.project" Active="No"/>
   <VirtualDirectory Name="Esoneri Passati">
-    <Project Name="2020D" Path="2020D/2020D.project" Active="No"/>
-    <Project Name="2020C" Path="2020C/2020C.project" Active="Yes"/>
+    <Project Name="2020C" Path="2020C/2020C.project" Active="No"/>
+    <Project Name="2020B" Path="2020B/2020B.project" Active="No"/>
+    <Project Name="2020A" Path="2020A/2020A.project" Active="No"/>
+    <Project Name="2020D" Path="2020D/2020D.project" Active="Yes"/>
   </VirtualDirectory>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="01-DoppiaStringa" ConfigName="Debug"/>
       <Project Name="02-DifferenzaNumerici" ConfigName="Debug"/>
-      <Project Name="2020D" ConfigName="Debug"/>
+      <Project Name="2020A" ConfigName="Debug"/>
       <Project Name="2020C" ConfigName="Debug"/>
+      <Project Name="2020B" ConfigName="Debug"/>
+      <Project Name="2020A" ConfigName="Debug"/>
+      <Project Name="2020D" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="01-DoppiaStringa" ConfigName="Release"/>
       <Project Name="02-DifferenzaNumerici" ConfigName="Release"/>
-      <Project Name="2020D" ConfigName="Release"/>
+      <Project Name="2020A" ConfigName="Release"/>
       <Project Name="2020C" ConfigName="Release"/>
+      <Project Name="2020B" ConfigName="Release"/>
+      <Project Name="2020A" ConfigName="Release"/>
+      <Project Name="2020D" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

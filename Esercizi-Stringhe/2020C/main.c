@@ -1,28 +1,29 @@
 #include <stdio.h>
 
+void cancellaCella(char str[], int i){
+	while(str[i]!='\0'){
+		str[i]=str[i+1];
+		i++;
+	}
+}
+
 void nienteNumeriDueCifre(char str[])
 {
-	int preNumerico;
 	int i=0;
-	int j=0;
+	int preNumerico=0;
 	while (str[i]!='\0'){
-		if(str[i]>='0' && str[i]<='9'){
-			if (preNumerico==1){
-				if (!(str[i+1]>='0' && str[i+1]<='9')) {
-					j=i;
-					while (str[j]!='\0'){
-						str[j-1]=str[j+1];
-						str[j]=str[j+2];
-						j++;
-					}
-				}
-				preNumerico=0;
-			} else if (!(str[i-1]>='0' && str[i-1]<='9')){
-				preNumerico=1;
+		if (str[i]>='0' && str[i]<='9'){
+			while (str[i]>='0' && str[i]<='9'){
 				i++;
-			} else {
-				i++;
+				preNumerico++;
 			}
+			
+			if (preNumerico==2){
+				for(int j=0; j<2; j++){
+					cancellaCella(str, i-2); 
+				}
+			}
+			preNumerico=0;
 		} else {
 			i++;
 		}
@@ -31,17 +32,40 @@ void nienteNumeriDueCifre(char str[])
 
 void testNienteNumeriDueCifre()
 {
-	char stringa1[] = ""; 
-	nienteNumeriDueCifre(stringa1); 
-	printf("Test nienteNumeriDueCifre(\"\"): Atteso = \"\", Calcolato = \"%s\" \n", stringa1);
+	// non avevo voglia di inventarmi i test.
 	
-	char stringa2[] = "popipopi"; 
-	nienteNumeriDueCifre(stringa2); 
-	printf("Test nienteNumeriDueCifre(\"popipopi\"): Atteso = \"popipopi\", Calcolato = \"%s\" \n", stringa2);
-	
-	char stringa3[] = "po45i3sa!"; 
-	nienteNumeriDueCifre(stringa3); 
-	printf("Test nienteNumeriDueCifre(\"po45i3sa!\"): Atteso = \"45i3!\", Calcolato = \"%s\" \n", stringa3);
+    /*stringa nulla*/
+    char stringa1[]="";
+    nienteNumeriDueCifre(stringa1);
+    printf("Test nienteNumeriDueCifre(\"\"): Atteso=\"\", Calcolato=\"%s\" \n", stringa1);
+    /*stringa senza caratterici numerici*/
+    char stringa2[]="abcd";
+    nienteNumeriDueCifre(stringa2);
+    printf("Test nienteNumeriDueCifre(\"abcd\"): Atteso=\"abcd\", Calcolato=\"%s\" \n", stringa2);
+    /*stringa con un solo carattere numerico*/
+    char stringa3[]="1";
+    nienteNumeriDueCifre(stringa3);
+    printf("Test nienteNumeriDueCifre(\"1\"): Atteso=\"1\", Calcolato=\"%s\" \n", stringa3);
+    /*stringa con due caratteri numerici*/
+    char stringa4[]="12";
+    nienteNumeriDueCifre(stringa4);
+    printf("Test nienteNumeriDueCifre(\"12\"): Atteso=\"\", Calcolato=\"%s\" \n", stringa4);
+    /*stringa con tre caratteri numerici*/
+    char stringa5[]="123";
+    nienteNumeriDueCifre(stringa5);
+    printf("Test nienteNumeriDueCifre(\"123\"): Atteso=\"123\", Calcolato=\"%s\" \n", stringa5);
+    /*stringa con due caratteri numerici all'inizio*/
+    char stringa6[]="12abc";
+    nienteNumeriDueCifre(stringa6);
+    printf("Test nienteNumeriDueCifre(\"12abc\"): Atteso=\"abc\", Calcolato=\"%s\" \n", stringa6);
+    /*stringa con due caratteri numerici alla fine*/
+    char stringa7[]="abc12";
+    nienteNumeriDueCifre(stringa7);
+    printf("Test nienteNumeriDueCifre(\"abc12\"): Atteso=\"abc\", Calcolato=\"%s\" \n", stringa7);
+    /*stringa generale*/
+    char stringa8[]="12ab123fg67xyh2iu09";
+    nienteNumeriDueCifre(stringa8);
+    printf("Test nienteNumeriDueCifre(\"12ab123fg67xyh2iu09\"): Atteso=\"ab123fgxyh2iu\", Calcolato=\"%s\" \n", stringa8);
 }
 
 int main(int argc, char **argv)
