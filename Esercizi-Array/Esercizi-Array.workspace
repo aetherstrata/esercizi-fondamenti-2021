@@ -14,7 +14,8 @@
   <Project Name="02-TreUguali" Path="02-TreUguali/02-TreUguali.project" Active="No"/>
   <Project Name="03-PercentualePositivi" Path="03-PercentualePositivi/03-PercentualePositivi.project" Active="No"/>
   <Project Name="04-DistanzaMinima" Path="04-DistanzaMinima/04-DistanzaMinima.project" Active="No"/>
-  <Project Name="05-Prefisso" Path="05-Prefisso/05-Prefisso.project" Active="Yes"/>
+  <Project Name="05-Prefisso" Path="05-Prefisso/05-Prefisso.project" Active="No"/>
+  <Project Name="10-UgualeSommaPrecedenti" Path="10-UgualeSommaPrecedenti/10-UgualeSommaPrecedenti.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -33,6 +34,7 @@
       <Project Name="03-PercentualePositivi" ConfigName="Debug"/>
       <Project Name="04-DistanzaMinima" ConfigName="Debug"/>
       <Project Name="05-Prefisso" ConfigName="Debug"/>
+      <Project Name="10-UgualeSommaPrecedenti" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -51,6 +53,7 @@
       <Project Name="03-PercentualePositivi" ConfigName="Release"/>
       <Project Name="04-DistanzaMinima" ConfigName="Release"/>
       <Project Name="05-Prefisso" ConfigName="Release"/>
+      <Project Name="10-UgualeSommaPrecedenti" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
