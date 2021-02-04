@@ -10,7 +10,8 @@
   </VirtualDirectory>
   <Project Name="06-OccorrenzeConsecutive" Path="06-OccorrenzeConsecutive/06-OccorrenzeConsecutive.project" Active="No"/>
   <Project Name="05-PrimaMaiuscole" Path="05-PrimaMaiuscole/05-PrimaMaiuscole.project" Active="No"/>
-  <Project Name="04-ShiftParametrico" Path="04-ShiftParametrico/04-ShiftParametrico.project" Active="Yes"/>
+  <Project Name="04-ShiftParametrico" Path="04-ShiftParametrico/04-ShiftParametrico.project" Active="No"/>
+  <Project Name="03-NumeroMassimo" Path="03-NumeroMassimo/03-NumeroMassimo.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -24,6 +25,7 @@
       <Project Name="06-OccorrenzeConsecutive" ConfigName="Debug"/>
       <Project Name="05-PrimaMaiuscole" ConfigName="Debug"/>
       <Project Name="04-ShiftParametrico" ConfigName="Debug"/>
+      <Project Name="03-NumeroMassimo" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -37,6 +39,7 @@
       <Project Name="06-OccorrenzeConsecutive" ConfigName="Release"/>
       <Project Name="05-PrimaMaiuscole" ConfigName="Release"/>
       <Project Name="04-ShiftParametrico" ConfigName="Release"/>
+      <Project Name="03-NumeroMassimo" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
