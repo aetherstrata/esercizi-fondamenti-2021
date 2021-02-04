@@ -9,7 +9,8 @@
     <Project Name="2020D" Path="2020D/2020D.project" Active="No"/>
   </VirtualDirectory>
   <Project Name="06-OccorrenzeConsecutive" Path="06-OccorrenzeConsecutive/06-OccorrenzeConsecutive.project" Active="No"/>
-  <Project Name="05-PrimaMaiuscole" Path="05-PrimaMaiuscole/05-PrimaMaiuscole.project" Active="Yes"/>
+  <Project Name="05-PrimaMaiuscole" Path="05-PrimaMaiuscole/05-PrimaMaiuscole.project" Active="No"/>
+  <Project Name="04-ShiftParametrico" Path="04-ShiftParametrico/04-ShiftParametrico.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -22,6 +23,7 @@
       <Project Name="2020D" ConfigName="Debug"/>
       <Project Name="06-OccorrenzeConsecutive" ConfigName="Debug"/>
       <Project Name="05-PrimaMaiuscole" ConfigName="Debug"/>
+      <Project Name="04-ShiftParametrico" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -34,6 +36,7 @@
       <Project Name="2020D" ConfigName="Release"/>
       <Project Name="06-OccorrenzeConsecutive" ConfigName="Release"/>
       <Project Name="05-PrimaMaiuscole" ConfigName="Release"/>
+      <Project Name="04-ShiftParametrico" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
