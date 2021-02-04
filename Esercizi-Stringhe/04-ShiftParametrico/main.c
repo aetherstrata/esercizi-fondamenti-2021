@@ -13,16 +13,18 @@ void shiftParametrico(char str[], int n)
 		}
 	}
 	
-	for (int j=0; j<n; j++){
-		while (k>=0){
-			str[k+n]=str[k];
-			k--;
-		}
+	// Non fare niente se la stringa è vuota (spreco di tempo)
+	if (len!=0){
+		for (int j=0; j<n; j++){
+			while (k>=0){
+				str[k+n]=str[k];
+				k--;
+			}
 		
 		str[j]=str[j+len];
+		}
+		str[len]='\0';
 	}
-	
-	str[len]='\0';
 }
 
 void testShiftParametrico()
@@ -51,6 +53,11 @@ void testShiftParametrico()
 	char stringa5[] = "abc"; 
 	shiftParametrico(stringa5, 5);
 	printf("Test shiftParametrico(\"abc\", 5): Atteso = \"bca\", Calcolato = \"%s\" \n", stringa5);
+	
+	/* stringa di un carattere */ 
+	char stringa6[] = "a"; 
+	shiftParametrico(stringa6, 3);
+	printf("Test shiftParametrico(\"a\", 3): Atteso = \"a\", Calcolato = \"%s\" \n", stringa6);
 }
 
 int main(int argc, char **argv)
