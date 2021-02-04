@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 void cancellaCella(char str[], int i){
 	while(str[i]!='\0'){

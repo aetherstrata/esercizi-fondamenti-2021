@@ -4,7 +4,7 @@
   <Project Name="02-DifferenzaNumerici" Path="02-DifferenzaNumerici/02-DifferenzaNumerici.project" Active="No"/>
   <VirtualDirectory Name="Esoneri Passati">
     <Project Name="2020C" Path="2020C/2020C.project" Active="No"/>
-    <Project Name="2020B" Path="2020B/2020B.project" Active="No"/>
+    <Project Name="2020B" Path="2020B/2020B.project" Active="Yes"/>
     <Project Name="2020A" Path="2020A/2020A.project" Active="No"/>
     <Project Name="2020D" Path="2020D/2020D.project" Active="No"/>
   </VirtualDirectory>
@@ -12,7 +12,7 @@
   <Project Name="05-PrimaMaiuscole" Path="05-PrimaMaiuscole/05-PrimaMaiuscole.project" Active="No"/>
   <Project Name="04-ShiftParametrico" Path="04-ShiftParametrico/04-ShiftParametrico.project" Active="No"/>
   <Project Name="03-NumeroMassimo" Path="03-NumeroMassimo/03-NumeroMassimo.project" Active="No"/>
-  <Project Name="07-NonNumerici" Path="07-NonNumerici/07-NonNumerici.project" Active="Yes"/>
+  <Project Name="07-NonNumerici" Path="07-NonNumerici/07-NonNumerici.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
