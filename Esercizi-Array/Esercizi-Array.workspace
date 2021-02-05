@@ -9,13 +9,14 @@
     <Project Name="201701A" Path="201701A/201701A.project" Active="No"/>
     <Project Name="201701B" Path="201701B/201701B.project" Active="No"/>
     <Project Name="201701C" Path="201701C/201701C.project" Active="No"/>
+    <Project Name="2021A" Path="2021A/2021A.project" Active="Yes"/>
   </VirtualDirectory>
   <Project Name="01-SommaMassima3Consecutivi" Path="01-SommaMassima3Consecutivi/01-SommaMassima3Consecutivi.project" Active="No"/>
   <Project Name="02-TreUguali" Path="02-TreUguali/02-TreUguali.project" Active="No"/>
   <Project Name="03-PercentualePositivi" Path="03-PercentualePositivi/03-PercentualePositivi.project" Active="No"/>
   <Project Name="04-DistanzaMinima" Path="04-DistanzaMinima/04-DistanzaMinima.project" Active="No"/>
   <Project Name="05-Prefisso" Path="05-Prefisso/05-Prefisso.project" Active="No"/>
-  <Project Name="10-UgualeSommaPrecedenti" Path="10-UgualeSommaPrecedenti/10-UgualeSommaPrecedenti.project" Active="Yes"/>
+  <Project Name="10-UgualeSommaPrecedenti" Path="10-UgualeSommaPrecedenti/10-UgualeSommaPrecedenti.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -35,6 +36,7 @@
       <Project Name="04-DistanzaMinima" ConfigName="Debug"/>
       <Project Name="05-Prefisso" ConfigName="Debug"/>
       <Project Name="10-UgualeSommaPrecedenti" ConfigName="Debug"/>
+      <Project Name="2021A" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -54,6 +56,7 @@
       <Project Name="04-DistanzaMinima" ConfigName="Release"/>
       <Project Name="05-Prefisso" ConfigName="Release"/>
       <Project Name="10-UgualeSommaPrecedenti" ConfigName="Release"/>
+      <Project Name="2021A" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
