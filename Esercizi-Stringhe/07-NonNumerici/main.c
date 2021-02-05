@@ -53,6 +53,12 @@ int main(int argc, char **argv)
 	char stringa[50];
 	fgets(stringa, 50, stdin);
 	
+	int i=0;
+	while (stringa[i]!='\n'){
+		i++;
+	}
+	stringa[i]='\0';
+	
 	eliminaNonNumerici(stringa);
 	printf("La stringa modificata %c %s\n\n", 138, stringa);
 	
