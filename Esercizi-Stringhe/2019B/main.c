@@ -45,7 +45,7 @@ void testDueMinuscolePerVolta()
 	/* stringa mista */ 
 	char stringa4[] = "abcdeFGHImeme666!!uuwwuu"; 
 	dueMinuscolePerVolta(stringa4); 
-	printf("Test dueMinuscolePerVolta(\"abcdeFGHImeme666!!uuwwuu\"): Atteso = \"abFGHIme666!!uu\", Calcolato = \"%s\" \n", stringa4);
+	printf("Test dueMinuscolePerVolta(\"abcdeFGHImeme666!!uwu\"): Atteso = \"abFGHIme666!!uw\", Calcolato = \"%s\" \n", stringa4);
 	
 }
 
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 	fgets(stringa, 50, stdin);
 	
 	int i=0;
-	while(stringa[i]!='\0'){
+	while(stringa[i]!='\n'){
 		i++;
 	}
 	stringa[i]='\0';
