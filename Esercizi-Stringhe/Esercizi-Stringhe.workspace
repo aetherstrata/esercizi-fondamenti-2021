@@ -9,7 +9,8 @@
     <Project Name="2020D" Path="2020D/2020D.project" Active="No"/>
     <Project Name="2019A" Path="2019A/2019A.project" Active="No"/>
     <Project Name="2019B" Path="2019B/2019B.project" Active="No"/>
-    <Project Name="2021A" Path="2021A/2021A.project" Active="Yes"/>
+    <Project Name="2021A" Path="2021A/2021A.project" Active="No"/>
+    <Project Name="2021C" Path="2021C/2021C.project" Active="Yes"/>
   </VirtualDirectory>
   <Project Name="06-OccorrenzeConsecutive" Path="06-OccorrenzeConsecutive/06-OccorrenzeConsecutive.project" Active="No"/>
   <Project Name="05-PrimaMaiuscole" Path="05-PrimaMaiuscole/05-PrimaMaiuscole.project" Active="No"/>
@@ -34,6 +35,7 @@
       <Project Name="2019A" ConfigName="Debug"/>
       <Project Name="2019B" ConfigName="Debug"/>
       <Project Name="2021A" ConfigName="Debug"/>
+      <Project Name="2021C" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -52,6 +54,7 @@
       <Project Name="2019A" ConfigName="Release"/>
       <Project Name="2019B" ConfigName="Release"/>
       <Project Name="2021A" ConfigName="Release"/>
+      <Project Name="2021C" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
