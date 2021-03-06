@@ -1,17 +1,23 @@
 #include <stdio.h>
 
+int recFatt(int n);
+
+/* programma per il calcolo del fattoriale */
 int main()
 {
-	int numero, fattoriale;
-	printf("Inserisci un numero sul quale eseguire il fattoriale: ");
+	int numero;
+	printf("Io calcolo fattoriali. Di che numero vuoi il fattoriale?\n");
 	scanf("%d", &numero);
-	
-	fattoriale = 1;
-	
-	for (int i = 1; i<=numero; i++){
-		fattoriale = fattoriale * i;
-	}
-	
-	printf("Il fattoriale di %d vale %d.\n", numero, fattoriale);
-	return 0;
+	printf("Il fattoriale vale %d", recFatt(numero));
+}
+
+/* funzione per il calcolo del fattoriale di un numero */
+int recFatt(int n) {
+	// pre: n>=1
+    int fatt;		// il risultato			
+    if (n==1)
+		fatt = 1; 
+    else 
+		fatt = n * recFatt(n-1);
+    return fatt;
 }

@@ -1,24 +1,30 @@
 #include <stdio.h>
 
-//Calcola il GCD tra due numer interi
-int Mcd(int a, int b)
+int recMcd(int n1, int n2);
+
+/* programma per il calcolo del massimo comun divisore di due numeri */
+int main()
 {
-	//pre: a,b > 0
-	int risultato;
-	
-	if (a<b)
-		risultato = a;
-	else
-		risultato = b;
-	
-	while (a%risultato !=0 || b%risultato !=0)
-		risultato--;
-	
-	return risultato;
+	int numero1, numero2;
+	printf("Io calcolo il massimo comun divisore di due numeri interi positivi. Dammi due numeri\n");
+	scanf("%d%d", &numero1, &numero2);
+	printf("Il massimo comun divisore vale %d", recMcd(numero1,numero2));
 }
 
-int main(int argc, char **argv)
-{
-	printf("hello world\n");
-	return 0;
+/* funzione per il calcolo del massimo comun divisore fra due numeri tramite
+    l'algoritmo di euclide */
+int recMcd(int n1, int n2) {
+	// pre: n1,n2>=1
+    int mcd;		// il risultato			
+
+    /* se i numeri sono uguali allora quello è il mcd */
+	if (n1==n2)		
+		mcd = n1; 
+    /* altrimenti il mcd è pari al mcd fra il più piccolo e il più grande meno il più piccolo */
+    else 
+		if(n1>n2)
+			mcd = recMcd(n2,n1-n2);
+		else
+			mcd = recMcd(n1,n2-n1);
+    return mcd;
 }
