@@ -6,7 +6,7 @@
     <Project Name="AreaRettangolo" Path="AreaRettangolo/AreaRettangolo.project" Active="No"/>
     <Project Name="Calcoli" Path="Calcoli/Calcoli.project" Active="No"/>
     <Project Name="ComparaNumeri" Path="ComparaNumeri/ComparaNumeri.project" Active="No"/>
-    <Project Name="ContaOccorrenze" Path="ContaOccorrenze/ContaOccorrenze.project" Active="Yes"/>
+    <Project Name="ContaOccorrenze" Path="ContaOccorrenze/ContaOccorrenze.project" Active="No"/>
     <Project Name="Divisore" Path="Divisore/Divisore.project" Active="No"/>
     <Project Name="DuplicatoreCorretto" Path="DuplicatoreCorretto/DuplicatoreCorretto.project" Active="No"/>
     <Project Name="EspressioniBool" Path="EspressioniBool/EspressioniBool.project" Active="No"/>
@@ -28,15 +28,20 @@
     <Project Name="VerificaTriangolo" Path="VerificaTriangolo/VerificaTriangolo.project" Active="No"/>
   </VirtualDirectory>
   <VirtualDirectory Name="Secondo Semestre">
-    <Project Name="Disposizioni" Path="Disposizioni/Disposizioni.project"/>
-    <Project Name="Fattoriale" Path="Fattoriale/Fattoriale.project"/>
-    <Project Name="Fibonacci" Path="Fibonacci/Fibonacci.project"/>
-    <Project Name="Hanoi" Path="Hanoi/Hanoi.project"/>
-    <Project Name="MCD" Path="MCD/MCD.project"/>
-    <Project Name="Palindroma" Path="Palindroma/Palindroma.project"/>
-    <Project Name="Potenza" Path="Potenza/Potenza.project"/>
-    <Project Name="Prodotto" Path="Prodotto/Prodotto.project"/>
-    <Project Name="SommaProdotto" Path="SommaProdotto/SommaProdotto.project"/>
+    <Project Name="Disposizioni" Path="Disposizioni/Disposizioni.project" Active="No"/>
+    <Project Name="Fattoriale" Path="Fattoriale/Fattoriale.project" Active="No"/>
+    <Project Name="Fibonacci" Path="Fibonacci/Fibonacci.project" Active="No"/>
+    <Project Name="Hanoi" Path="Hanoi/Hanoi.project" Active="No"/>
+    <Project Name="MCD" Path="MCD/MCD.project" Active="No"/>
+    <Project Name="Palindroma" Path="Palindroma/Palindroma.project" Active="No"/>
+    <Project Name="Potenza" Path="Potenza/Potenza.project" Active="No"/>
+    <Project Name="Prodotto" Path="Prodotto/Prodotto.project" Active="No"/>
+    <Project Name="SommaProdotto" Path="SommaProdotto/SommaProdotto.project" Active="No"/>
+    <VirtualDirectory Name="Esercitazione 1">
+      <Project Name="UnoPariUnoPositivo" Path="UnoPariUnoPositivo/UnoPariUnoPositivo.project" Active="No"/>
+      <Project Name="tuttiAlternati" Path="tuttiAlternati/tuttiAlternati.project" Active="No"/>
+      <Project Name="Polinomi" Path="Polinomi/Polinomi.project" Active="Yes"/>
+    </VirtualDirectory>
   </VirtualDirectory>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
@@ -81,6 +86,9 @@
       <Project Name="Potenza" ConfigName="Debug"/>
       <Project Name="Prodotto" ConfigName="Debug"/>
       <Project Name="SommaProdotto" ConfigName="Debug"/>
+      <Project Name="UnoPariUnoPositivo" ConfigName="Debug"/>
+      <Project Name="tuttiAlternati" ConfigName="Debug"/>
+      <Project Name="Polinomi" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -124,6 +132,9 @@
       <Project Name="Potenza" ConfigName="Release"/>
       <Project Name="Prodotto" ConfigName="Release"/>
       <Project Name="SommaProdotto" ConfigName="Release"/>
+      <Project Name="UnoPariUnoPositivo" ConfigName="Release"/>
+      <Project Name="tuttiAlternati" ConfigName="Release"/>
+      <Project Name="Polinomi" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
