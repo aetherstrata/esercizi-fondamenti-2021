@@ -40,7 +40,13 @@
     <VirtualDirectory Name="Esercitazione 1">
       <Project Name="UnoPariUnoPositivo" Path="UnoPariUnoPositivo/UnoPariUnoPositivo.project" Active="No"/>
       <Project Name="tuttiAlternati" Path="tuttiAlternati/tuttiAlternati.project" Active="No"/>
-      <Project Name="Polinomi" Path="Polinomi/Polinomi.project" Active="Yes"/>
+      <Project Name="Polinomi" Path="Polinomi/Polinomi.project" Active="No"/>
+    </VirtualDirectory>
+    <Project Name="EsempioPuntatore" Path="EsempioPuntatore/EsempioPuntatore.project" Active="No"/>
+    <VirtualDirectory Name="Esercitazione 2">
+      <Project Name="DividiInteri" Path="DividiInteri/DividiInteri.project" Active="No"/>
+      <Project Name="StringaSoloMaiuscole" Path="StringaSoloMaiuscole/StringaSoloMaiuscole.project" Active="No"/>
+      <Project Name="MassimoIntero" Path="MassimoIntero/MassimoIntero.project" Active="Yes"/>
     </VirtualDirectory>
   </VirtualDirectory>
   <BuildMatrix>
@@ -89,6 +95,11 @@
       <Project Name="UnoPariUnoPositivo" ConfigName="Debug"/>
       <Project Name="tuttiAlternati" ConfigName="Debug"/>
       <Project Name="Polinomi" ConfigName="Debug"/>
+      <Project Name="EsempioPuntatore" ConfigName="Debug"/>
+      <Project Name="DividiInteri" ConfigName="Debug"/>
+      <Project Name="StringaSoloMaiuscole" ConfigName="Debug"/>
+      <Project Name="MassimoIntero" ConfigName="Debug"/>
+      <Project Name="MassimoInteroSoluzione" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -135,6 +146,11 @@
       <Project Name="UnoPariUnoPositivo" ConfigName="Release"/>
       <Project Name="tuttiAlternati" ConfigName="Release"/>
       <Project Name="Polinomi" ConfigName="Release"/>
+      <Project Name="EsempioPuntatore" ConfigName="Release"/>
+      <Project Name="DividiInteri" ConfigName="Release"/>
+      <Project Name="StringaSoloMaiuscole" ConfigName="Release"/>
+      <Project Name="MassimoIntero" ConfigName="Release"/>
+      <Project Name="MassimoInteroSoluzione" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
