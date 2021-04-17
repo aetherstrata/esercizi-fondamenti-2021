@@ -46,7 +46,10 @@
     <VirtualDirectory Name="Esercitazione 2">
       <Project Name="DividiInteri" Path="DividiInteri/DividiInteri.project" Active="No"/>
       <Project Name="StringaSoloMaiuscole" Path="StringaSoloMaiuscole/StringaSoloMaiuscole.project" Active="No"/>
-      <Project Name="MassimoIntero" Path="MassimoIntero/MassimoIntero.project" Active="Yes"/>
+      <Project Name="MassimoIntero" Path="MassimoIntero/MassimoIntero.project" Active="No"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Esercitazione 3">
+      <Project Name="Parallelogrammi" Path="Parallelogrammi/Parallelogrammi.project" Active="Yes"/>
     </VirtualDirectory>
   </VirtualDirectory>
   <BuildMatrix>
@@ -100,6 +103,7 @@
       <Project Name="StringaSoloMaiuscole" ConfigName="Debug"/>
       <Project Name="MassimoIntero" ConfigName="Debug"/>
       <Project Name="MassimoInteroSoluzione" ConfigName="Debug"/>
+      <Project Name="Parallelogrammi" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -151,6 +155,7 @@
       <Project Name="StringaSoloMaiuscole" ConfigName="Release"/>
       <Project Name="MassimoIntero" ConfigName="Release"/>
       <Project Name="MassimoInteroSoluzione" ConfigName="Release"/>
+      <Project Name="Parallelogrammi" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
