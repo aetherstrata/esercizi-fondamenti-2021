@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Esercizi-Ricorsione" Database="" Version="10000">
+  <Project Name="AlmenoUnaMaiuscola" Path="AlmenoUnaMaiuscola/AlmenoUnaMaiuscola.project" Active="No"/>
+  <Project Name="ContaCaratteriStringa" Path="ContaCaratteriStringa/ContaCaratteriStringa.project" Active="No"/>
+  <Project Name="ContaCifre" Path="ContaCifre/ContaCifre.project" Active="No"/>
+  <Project Name="ConvertiArrayNumero" Path="ConvertiArrayNumero/ConvertiArrayNumero.project" Active="No"/>
+  <Project Name="ConvertiNumeroArray" Path="ConvertiNumeroArray/ConvertiNumeroArray.project" Active="No"/>
+  <Project Name="Quadrati" Path="Quadrati/Quadrati.project" Active="No"/>
+  <Project Name="TriplaSommaMassima" Path="TriplaSommaMassima/TriplaSommaMassima.project" Active="No"/>
+  <Project Name="DistanzaMinima" Path="DistanzaMinima/DistanzaMinima.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="AlmenoUnaMaiuscola" ConfigName="Debug"/>
+      <Project Name="ContaCaratteriStringa" ConfigName="Debug"/>
+      <Project Name="ContaCifre" ConfigName="Debug"/>
+      <Project Name="ConvertiArrayNumero" ConfigName="Debug"/>
+      <Project Name="ConvertiNumeroArray" ConfigName="Debug"/>
+      <Project Name="Quadrati" ConfigName="Debug"/>
+      <Project Name="TriplaSommaMassima" ConfigName="Debug"/>
+      <Project Name="DistanzaMinima" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="AlmenoUnaMaiuscola" ConfigName="Release"/>
+      <Project Name="ContaCaratteriStringa" ConfigName="Release"/>
+      <Project Name="ContaCifre" ConfigName="Release"/>
+      <Project Name="ConvertiArrayNumero" ConfigName="Release"/>
+      <Project Name="ConvertiNumeroArray" ConfigName="Release"/>
+      <Project Name="Quadrati" ConfigName="Release"/>
+      <Project Name="TriplaSommaMassima" ConfigName="Release"/>
+      <Project Name="DistanzaMinima" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
