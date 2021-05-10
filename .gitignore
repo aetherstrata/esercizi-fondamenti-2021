@@ -65,3 +65,7 @@ Makefile
 
 # Build folder
 build*
+
+### MS Office ###
+# Temporary files
+~$*.docx
