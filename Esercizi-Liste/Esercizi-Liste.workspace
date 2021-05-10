@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Esercizi-Liste" Database="" Version="10000">
+  <Project Name="Cerchi" Path="Cerchi/Cerchi.project" Active="No"/>
+  <Project Name="Rette" Path="Rette/Rette.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="Cerchi" ConfigName="Debug"/>
+      <Project Name="Rette" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="Cerchi" ConfigName="Release"/>
+      <Project Name="Rette" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
