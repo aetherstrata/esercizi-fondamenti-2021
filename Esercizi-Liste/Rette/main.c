@@ -189,6 +189,7 @@ Nodo* leggiDaFile()
 		} else {
 			printf("Il file %c vuoto!\n\n", 138);
 		}
+		fclose(fp);
 	}
 	return head;
 }

@@ -15,39 +15,44 @@ typedef struct VettoreParallelogramma {
 	float b;
 } VectorSet;
 
+typedef struct Nodo {
+	VectorSet v;
+	struct Nodo* next;
+} Node;
+
 /* * * * * * * * * * * * * * * * * */
 /* *Funzioni geometriche * * * * * */
 /* * * * * * * * * * * * * * * * * */
 
-float Altezza(VectorSet para) 
+float Altezza(VectorSet* para) 
 {
-	float h = para.ad.y - para.bs.y;
+	float h = para->ad.y - para->bs.y;
 	return h;
 }
 
-float LatoObliquo(VectorSet para)
+float LatoObliquo(VectorSet* para)
 {
-	float lato = sqrt( pow((para.ad.x-para.bs.x-para.b),2) + pow(Altezza(para),2) );
+	float lato = sqrt( pow((para->ad.x-para->bs.x-para->b),2) + pow(Altezza(para),2) );
 	return lato;
 }
 
-float Perimetro(VectorSet para)
+float Perimetro(VectorSet* para)
 {
-	int perimetro = LatoObliquo(para)*2 + para.b*2;
+	int perimetro = LatoObliquo(para)*2 + para->b*2;
 	return perimetro;
 }
 
-float Area(VectorSet para)
+float Area(VectorSet* para)
 {
-	float area = para.b * Altezza(para);
+	float area = para->b * Altezza(para);
 	return area;
 }
 
-int isRettangolo (VectorSet para)
+int isRettangolo (VectorSet* para)
 {
 	int result = 0;
 	
-	if ((para.ad.x-para.b) == para.bs.x)
+	if ((para->ad.x-para->b) == para->bs.x)
 		result = 1;
 	
 	return result;
@@ -62,13 +67,13 @@ void stampaPunto(Point p)
 	printf("(%.2f , %.2f)\n", p.x, p.y);
 }
 
-void stampaVettoreParallelogramma(VectorSet para)
+void stampaVettoreParallelogramma(VectorSet* para)
 {
 	printf("Il vertice bs ha coordinate: ");
-	stampaPunto(para.bs);
+	stampaPunto(para->bs);
 	printf("Il vertice ad ha coordinate: ");
-	stampaPunto(para.ad);
-	printf("La lunghezza della base vale %.2f\n", para.b);
+	stampaPunto(para->ad);
+	printf("La lunghezza della base vale %.2f\n", para->b);
 	printf("Il perimetro del parallelogramma vale %.2f\n", Perimetro(para));
 	printf("L'area del parallelogramma vale %.2f\n", Area(para));
 	if (isRettangolo(para))
@@ -77,14 +82,15 @@ void stampaVettoreParallelogramma(VectorSet para)
 		printf("Questo parallelogramma NON %c rettangolo!\n\n", 138);
 }
 
-void stampaLista(VectorSet* array, int l){
-	if(l==0){
+void stampaLista(Node* head){
+	if(head==NULL){
 		printf("Nessun parallelogramma nell'array!\n");
 	} else {
 		printf("Ecco la lista di parallelogrammi: \n\n");
-		for(int i=0; i<l; i++){
+		for(int i=1; head!=NULL; i++){
 			printf("Parallelogramma #%d: \n", i);
-			stampaVettoreParallelogramma(array[i]);
+			stampaVettoreParallelogramma(&head->v);
+			head=head->next;
 		}
 		printf("/---------------------/\n\n");
 	}
@@ -94,34 +100,54 @@ void stampaLista(VectorSet* array, int l){
 /* * * GESTIONE DEI FILE * * */
 /* * * * * * * * * * * * * * */
 
-int LeggiFile(VectorSet* array)
+Node* LeggiFile()
 {
-	int l = 0;
 	FILE* fp = fopen("datiVettori.dat", "rb");
+	Node* head;
 	
 	if(fp==NULL){
-		printf("Lettura fallita!\n");
+		printf("Lettura fallita!\n");\
+		head=NULL;
 	} else {
 		VectorSet para;
-		while(fread(&para, sizeof(VectorSet), 1, fp)>0){
-			array[l]=para;
-			l++;
+		int letto = fread(&para, sizeof(VectorSet), 1, fp);
+		
+		if(letto){
+			head = malloc(sizeof(Node));
+			head->v=para;
+			
+			Node* nodo=head;
+			while(fread(&para, sizeof(VectorSet), 1, fp)>0){
+				nodo->next = malloc(sizeof(Node));
+				nodo=nodo->next;
+				nodo->v=para;
+			}
+			nodo->next=NULL;
+			fclose(fp);
+		} else {
+			printf("Nulla da leggere!\n\n");
 		}
-		fclose(fp);
 	}
-	return l;
+	return head;
 }
 
-void SalvaSuFile(VectorSet* array, int l)
+void SalvaSuFile(Node* head)
 {
 	FILE* fp = fopen("datiVettori.dat", "wb");
 	if(fp==NULL){
 		printf("Scrittura fallita!\n");
 	} else {
-		fwrite(array, sizeof(VectorSet), l, fp);
-		fclose(fp);
-		printf("Salvataggio completato!\n\n");
-		printf("/---------------------/\n\n");
+		if(head==NULL){
+			printf("Nulla da salvare!\n\n");
+		} else {
+			while(head!=NULL){
+				fwrite(&head->v, sizeof(VectorSet), 1, fp);
+				head=head->next;
+			}
+			fclose(fp);
+			printf("Salvataggio completato!\n\n");
+			printf("/---------------------/\n\n");
+		}
 	}
 }
 
@@ -129,91 +155,72 @@ void SalvaSuFile(VectorSet* array, int l)
 /* * INSERIMENTO * */
 /* * * * * * * * * */
 
-void leggiVettori(VectorSet* para)
+VectorSet creaVettore()
 {
+	VectorSet para;
 	/* Vertice BS */
 	printf("Quali sono le coordinate del vertice BS?\n");
 	printf("X: ");
-	scanf("%f", &para->bs.x);
+	scanf("%f", &para.bs.x);
 	printf("Y: ");
-	scanf("%f", &para->bs.y);
+	scanf("%f", &para.bs.y);
 	
 	/* Vertice AD */
 	printf("Quali sono le coordinate del vertice AD?\n");
 	do {
-	printf("X: ");
-	scanf("%f", &para->ad.x); 
-	if (para->ad.x<=para->bs.x)
-		printf("Questo valore deve essere maggiore di %.2f!\n", para->bs.x);
-	} while (para->ad.x<=para->bs.x);
+		printf("X: ");
+		scanf("%f", &para.ad.x); 
+		if (para.ad.x<=para.bs.x)
+			printf("Questo valore deve essere maggiore di %.2f!\n", para.bs.x);
+	} while (para.ad.x<=para.bs.x);
 	do {
-	printf("Y: ");
-	scanf("%f", &para->ad.y); 
-	if (para->ad.y<=para->bs.y)
-		printf("Questo valore deve essere maggiore di %.2f!\n", para->bs.y);
-	} while (para->ad.y<=para->bs.y);
+		printf("Y: ");
+		scanf("%f", &para.ad.y); 
+		if (para.ad.y<=para.bs.y)
+			printf("Questo valore deve essere maggiore di %.2f!\n", para.bs.y);
+	} while (para.ad.y<=para.bs.y);
 
 	/* Lunghezza base */
 	do {
-	printf("Qual %c la lunghezza della base? ", 138);
-	scanf("%f", &para->b); 
-	if (para->b<=0 || para->b>=(para->ad.x-para->bs.x))
-		printf("Questo valore deve essere minore di %.2f e maggiore di 0\n", para->ad.x-para->bs.x);
-	} while (para->b<=0 || para->b>=(para->ad.x-para->bs.x));
+		printf("Qual %c la lunghezza della base? ", 138);
+		scanf("%f", &para.b); 
+		if (para.b<=0 || para.b>=(para.ad.x-para.bs.x))
+			printf("Questo valore deve essere minore di %.2f e maggiore di 0\n", para.ad.x-para.bs.x);
+	} while (para.b<=0 || para.b>=(para.ad.x-para.bs.x));
+	
+	return para;
 }
 
-int inserisciParallelogramma(VectorSet* array, int l)
+Node* inserisciParallelogramma(Node* head)
 {
-	if (l==10)
-		printf("Array completo!\n");
-	else {
-		leggiVettori(array+l);
-		l++;
-		printf("\n");
-		printf("Parallelogramma inserito nell'array!\n\n");
-		printf("/---------------------/\n\n");
-	}
-	return l;
+	Node* nuovo = malloc(sizeof(Node));
+	nuovo->v=creaVettore();
+	nuovo->next=head;
+	return nuovo;
 }
 
 /* * * * * * * * * * */
 /* * CANCELLAZIONE * */
 /* * * * * * * * * * */
 
-void cancellaCella(VectorSet* array, int idx, int l){
-	for(int i=idx; i<l; i++){
-		array[i]=array[i+1];
-		i++;
-	}
-}
-
-int cancellaParallelogramma(VectorSet* array, int l, float soglia)
+Node* cancellaParallelogramma(Node* head)
 {
-	int i=0;
-	while(i<l){
-		if(Area(array[i])>soglia){
-			cancellaCella(array, i, l);
-			l--;
+	if(head==NULL){
+		printf("Nulla da cancellare!\n\n");
+	} else {
+		if(head->next==NULL){
+			free(head);
+			head=NULL;
 		} else {
-			i++;
+			Node* nodo;
+			while(nodo->next!=NULL)
+				nodo=nodo->next;
+			free(nodo->next);
+			nodo->next=NULL;
 		}
+		printf("Cancellazione effettuata!\n\n");
 	}
-	return l;
-}
-
-int cancellaSoglia(VectorSet* array, int l)
-{
-	float limite;
-	
-	printf("Qual %c l'area limite? ", 138);
-	scanf("%f", &limite);
-	
-	l = cancellaParallelogramma(array, l , limite);
-	
-	printf("Tutti i parallelogrammi con area maggiore di %.2f sono stati cancellati!\n\n", limite);
-	printf("/---------------------/\n\n");
-	
-	return l;
+	return head;
 }
 
 /* * * * * * * * * * */
@@ -222,15 +229,13 @@ int cancellaSoglia(VectorSet* array, int l)
 
 int main(int argc, char **argv)
 {
-	VectorSet array[10];
-	int l=0;
-	l = LeggiFile(array);
+	Node* lista = LeggiFile();
 	
 	int risposta = 0;
-	do{
+	do {
 		printf("Quale operazione vuoi fare?\n\n");
 		printf("1 -> Inserisci un nuovo vettore parallelogramma.\n");
-		printf("2 -> Cancella tutti i parallelogrammi con area maggiore di un valore.\n");
+		printf("2 -> Cancella l'ultimo parallelogramma della lista.\n");
 		printf("3 -> Visualizza l'elenco dei parallelogrammi.\n");
 		printf("0 -> Termina esecuzione.\n\n");
 		printf("Risposta: ");
@@ -238,18 +243,18 @@ int main(int argc, char **argv)
 		printf("\n");
 		
 		if(risposta==1){
-			l = inserisciParallelogramma(array, l);
+			lista = inserisciParallelogramma(lista);
 		} else if (risposta==2){
-			l = cancellaSoglia(array, l);
+			lista = cancellaParallelogramma(lista);
 		} else if (risposta==3){
-			stampaLista(array, l);
+			stampaLista(lista);
 		} else if (risposta!=0){
 			printf("Selezione non valida!\n");
 		}
 	}
 	while (risposta != 0);
 	
-	SalvaSuFile(array, l);
+	SalvaSuFile(lista);
 	
 	return 0;
 }

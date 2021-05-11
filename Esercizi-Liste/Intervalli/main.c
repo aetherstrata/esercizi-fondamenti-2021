@@ -100,7 +100,7 @@ void stampaLista(Nodo* head)
 void stampaIntersezione(Nodo* head)
 {
 	if(minB(head)<=maxA(head)){
-		printf("Intersezione NON possibile!\n\n");
+		printf("Intersezione impossibile!\n\n");
 	} else {
 		Intervallo intersezione;
 		intersezione.a=maxA(head);
