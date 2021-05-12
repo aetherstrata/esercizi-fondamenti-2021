@@ -65,20 +65,15 @@ Nodo* inserisciNodo(Nodo* head)
 	Nodo* nuovo = malloc(sizeof(Nodo));
 	
 	nuovo->c = creaCerchio();
-	
 	nuovo->next=head;
-	head=nuovo;
 	
-	return head;
+	return nuovo;
 }
 
 /* * ELIMINAZIONE * */
 
 int uguale(Cerchio* c1, Cerchio* c2)
 {
-	if(c1->r==c2->r && c1->centro.x==c2->centro.x && c1->centro.y==c2->centro.y)
-		printf("Ho trovato un cerchio uguale!");
-	
 	return (c1->r==c2->r && c1->centro.x==c2->centro.x && c1->centro.y==c2->centro.y);
 }
 

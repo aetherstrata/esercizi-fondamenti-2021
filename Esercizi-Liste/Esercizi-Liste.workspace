@@ -5,7 +5,8 @@
   <Project Name="Parallelogrammi" Path="Parallelogrammi/Parallelogrammi.project" Active="No"/>
   <Project Name="Persone" Path="Persone/Persone.project" Active="No"/>
   <Project Name="Intervalli" Path="Intervalli/Intervalli.project" Active="No"/>
-  <Project Name="Rombi" Path="Rombi/Rombi.project" Active="Yes"/>
+  <Project Name="Rombi" Path="Rombi/Rombi.project" Active="No"/>
+  <Project Name="Segmenti" Path="Segmenti/Segmenti.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -15,6 +16,7 @@
       <Project Name="Persone" ConfigName="Debug"/>
       <Project Name="Intervalli" ConfigName="Debug"/>
       <Project Name="Rombi" ConfigName="Debug"/>
+      <Project Name="Segmenti" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -24,6 +26,7 @@
       <Project Name="Persone" ConfigName="Release"/>
       <Project Name="Intervalli" ConfigName="Release"/>
       <Project Name="Rombi" ConfigName="Release"/>
+      <Project Name="Segmenti" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
