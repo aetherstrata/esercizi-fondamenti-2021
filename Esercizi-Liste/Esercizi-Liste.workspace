@@ -8,7 +8,8 @@
   <Project Name="Rombi" Path="Rombi/Rombi.project" Active="No"/>
   <Project Name="Segmenti" Path="Segmenti/Segmenti.project" Active="No"/>
   <Project Name="CoordinateGeografiche" Path="CoordinateGeografiche/CoordinateGeografiche.project" Active="No"/>
-  <Project Name="NumeriReali" Path="NumeriReali/NumeriReali.project" Active="Yes"/>
+  <Project Name="NumeriReali" Path="NumeriReali/NumeriReali.project" Active="No"/>
+  <Project Name="TriangoliRettangoli" Path="TriangoliRettangoli/TriangoliRettangoli.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -21,6 +22,7 @@
       <Project Name="Segmenti" ConfigName="Debug"/>
       <Project Name="CoordinateGeografiche" ConfigName="Debug"/>
       <Project Name="NumeriReali" ConfigName="Debug"/>
+      <Project Name="TriangoliRettangoli" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -33,6 +35,7 @@
       <Project Name="Segmenti" ConfigName="Release"/>
       <Project Name="CoordinateGeografiche" ConfigName="Release"/>
       <Project Name="NumeriReali" ConfigName="Release"/>
+      <Project Name="TriangoliRettangoli" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
