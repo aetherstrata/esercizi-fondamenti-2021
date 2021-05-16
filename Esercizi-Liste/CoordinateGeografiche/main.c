@@ -83,7 +83,7 @@ int main(int argc, char **argv)
 		printf("0- Termina il programma.\n\n");
 		printf("Inserisci la scelta: ");
 		scanf("%d",&choice);
-		printf("\n");
+		printf("\n''");
 		if(choice==1){
 			lista = inserisciCoordinata(lista);
 		} else if(choice==2){
