@@ -57,12 +57,15 @@ dkms.conf
 Makefile
 *.mk
 
-# User folder
+# User files
 .codelite
+tags
 
 # Temporary files
+*.dat
+*.session
 *.txt
-tags
+
 
 # Build folder
 build*
