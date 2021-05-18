@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 		printf("Inserisci la lunghezza della sequenza di numeri: ");
 		scanf("%d", &len);
 		if(len<2){
-			printf("Ci devono essere almeno due elementi nella sequenza!");
+			printf("Ci devono essere almeno due elementi nella sequenza!\n");
 		}
 	}
 	

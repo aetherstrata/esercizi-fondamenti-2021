@@ -7,7 +7,11 @@
   <Project Name="ConvertiNumeroArray" Path="ConvertiNumeroArray/ConvertiNumeroArray.project" Active="No"/>
   <Project Name="Quadrati" Path="Quadrati/Quadrati.project" Active="No"/>
   <Project Name="TriplaSommaMassima" Path="TriplaSommaMassima/TriplaSommaMassima.project" Active="No"/>
-  <Project Name="DistanzaMinima" Path="DistanzaMinima/DistanzaMinima.project" Active="Yes"/>
+  <Project Name="DistanzaMinima" Path="DistanzaMinima/DistanzaMinima.project" Active="No"/>
+  <Project Name="SequenzaCrescente" Path="SequenzaCrescente/SequenzaCrescente.project" Active="No"/>
+  <Project Name="ConsecutiviUguali" Path="ConsecutiviUguali/ConsecutiviUguali.project" Active="No"/>
+  <Project Name="NumeroPositivi" Path="NumeroPositivi/NumeroPositivi.project" Active="No"/>
+  <Project Name="InvertiStringa" Path="InvertiStringa/InvertiStringa.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -19,6 +23,10 @@
       <Project Name="Quadrati" ConfigName="Debug"/>
       <Project Name="TriplaSommaMassima" ConfigName="Debug"/>
       <Project Name="DistanzaMinima" ConfigName="Debug"/>
+      <Project Name="SequenzaCrescente" ConfigName="Debug"/>
+      <Project Name="ConsecutiviUguali" ConfigName="Debug"/>
+      <Project Name="NumeroPositivi" ConfigName="Debug"/>
+      <Project Name="InvertiStringa" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -30,6 +38,10 @@
       <Project Name="Quadrati" ConfigName="Release"/>
       <Project Name="TriplaSommaMassima" ConfigName="Release"/>
       <Project Name="DistanzaMinima" ConfigName="Release"/>
+      <Project Name="SequenzaCrescente" ConfigName="Release"/>
+      <Project Name="ConsecutiviUguali" ConfigName="Release"/>
+      <Project Name="NumeroPositivi" ConfigName="Release"/>
+      <Project Name="InvertiStringa" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

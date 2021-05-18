@@ -60,7 +60,11 @@
       <Project Name="PuntiColorati" Path="PuntiColorati/PuntiColorati.project" Active="No"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Esercitazione 6">
-      <Project Name="Fritti" Path="Fritti/Fritti.project" Active="Yes"/>
+      <Project Name="Fritti" Path="Fritti/Fritti.project" Active="No"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Esercitazione 7">
+      <Project Name="EsattamenteDueSuTre" Path="EsattamenteDueSuTre/EsattamenteDueSuTre.project" Active="No"/>
+      <Project Name="Persone2" Path="Persone2/Persone2.project" Active="Yes"/>
     </VirtualDirectory>
   </VirtualDirectory>
   <BuildMatrix>
@@ -121,6 +125,8 @@
       <Project Name="PuntiColorati" ConfigName="Debug"/>
       <Project Name="Fritti" ConfigName="Debug"/>
       <Project Name="Fritti" ConfigName="Debug"/>
+      <Project Name="EsattamenteDueSuTre" ConfigName="Debug"/>
+      <Project Name="Persone2" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -179,6 +185,8 @@
       <Project Name="PuntiColorati" ConfigName="Release"/>
       <Project Name="Fritti" ConfigName="Release"/>
       <Project Name="Fritti" ConfigName="Release"/>
+      <Project Name="EsattamenteDueSuTre" ConfigName="Release"/>
+      <Project Name="Persone2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
