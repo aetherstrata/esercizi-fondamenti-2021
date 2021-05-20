@@ -1,10 +1,8 @@
 #include <stdio.h>
 
 int numeroPositivi(int* array, int len){
-	int ris;
-	if(len==1){
-		ris=array[0]>=0;
-	} else {
+	int ris=0;
+	if(len>=0){
 		ris = (array[0]>=0) + numeroPositivi(array+1, len-1);
 	}
 	return ris;
@@ -27,6 +25,6 @@ int main(int argc, char **argv)
 		scanf("%d", &array[i]);
 	}
 	
-	printf("La sequenza contiene %d numeri positivi!\n",numeroPositivi(array, len));
+	printf("La sequenza contiene %d numeri positivi!\n",numeroPositivi(array, len-1));
 	return 0;
 }

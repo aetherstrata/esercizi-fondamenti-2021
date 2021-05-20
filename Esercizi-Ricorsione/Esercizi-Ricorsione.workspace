@@ -10,8 +10,8 @@
   <Project Name="DistanzaMinima" Path="DistanzaMinima/DistanzaMinima.project" Active="No"/>
   <Project Name="SequenzaCrescente" Path="SequenzaCrescente/SequenzaCrescente.project" Active="No"/>
   <Project Name="ConsecutiviUguali" Path="ConsecutiviUguali/ConsecutiviUguali.project" Active="No"/>
-  <Project Name="NumeroPositivi" Path="NumeroPositivi/NumeroPositivi.project" Active="No"/>
-  <Project Name="InvertiStringa" Path="InvertiStringa/InvertiStringa.project" Active="Yes"/>
+  <Project Name="NumeroPositivi" Path="NumeroPositivi/NumeroPositivi.project" Active="Yes"/>
+  <Project Name="InvertiStringa" Path="InvertiStringa/InvertiStringa.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
