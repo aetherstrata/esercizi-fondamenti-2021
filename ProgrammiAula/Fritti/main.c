@@ -2,109 +2,139 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct _FRITTO {
+/*****************************/
+/********* STRUTTURE *********/
+/*****************************/
+
+typedef struct FRITTO{
 	char nome[30];
+	char surgelato;
 	float prezzo;
-	char tipo;
 } Fritto;
 
-typedef struct _NODO {
+typedef struct NODO{
 	Fritto f;
-	struct _NODO* next;
+	struct NODO* next;
 } Nodo;
 
-// Stampa un fritto
+/*******************************************/
+/*********** FUNZIONI GEOMETRICHE **********/
+/*******************************************/
+
+
+/*****************************/
+/*********** STAMPE **********/
+/*****************************/
+
 void stampaFritto(Fritto* f){
-	printf("Fritto: %s\n", f->nome);
-	printf("Prezzo: %.2f", f->prezzo);
-	if(f->tipo == 's'){
-		printf("Surgelato: Si\n\n");
-	} else {
-		printf("Surgelato: No\n\n");
-	}
+	printf("Nome: %s\n", f->nome);
+	printf("Surgelato: %c\n", f->surgelato);
+	printf("Prezzo: %.2f\n", f->prezzo);
+	printf("|**************************|\n");
 }
 
-void stampaMenu(Nodo* head){
+void stampaLista(Nodo* head){
 	if(head==NULL){
-		printf("Nulla da stampare!\n");
+		printf("Nulla da stampare!\n\n");
 	} else {
-		printf("Ecco la lista dei fritti nel menu: \n");
+		printf("|**************************|\n");
 		while(head!=NULL){
 			stampaFritto(&head->f);
 			head=head->next;
 		}
-		printf("Fine del menu!\n");
+		printf("\n");
 	}
 }
 
-void leggiDati(Fritto* f)
-{
-	printf("Come si chiama il fritto?");
-	fgets(f->nome, 30, stdin);
-	f->nome[strlen(f->nome)-1]='\0';
-	printf("Quanto costa?");
-	scanf("%f", &f->prezzo);
-	printf("Surgelato?");
-	scanf("%c", &f->tipo);
+/**********************************************
+ **************** INSERIMENTO *****************
+ **********************************************/
+
+Fritto creaFritto(){
+	Fritto nuovo;
+	printf("Nome del fritto: ");
+	fgets(nuovo.nome, 30, stdin);
+	nuovo.nome[strlen(nuovo.nome)-1]='\0';
+	printf("Congelato: (S/N) ");
+	scanf("%c",&nuovo.surgelato);
+	printf("Prezzo: (Euro) ");
+	scanf("%f", &nuovo.prezzo);
+	return nuovo;
 }
 
-void inserimentoInCoda(Nodo** headPointer)
-{
+Nodo* inserisciFritto(Nodo* head){
 	Nodo* nuovo = malloc(sizeof(Nodo));
-	leggiDati(&nuovo->f);
+	nuovo->f=creaFritto();
 	nuovo->next=NULL;
-	
-	if(*headPointer==NULL){
-		*headPointer = nuovo;
-	} else {
-		Nodo* corrente = *headPointer;
-		while(corrente->next!=NULL){
-			corrente=corrente->next;
-		}
-		corrente->next = nuovo;
-	}
-}
-
-int precede(Fritto* f1`, Fritto* f2){
-	return (f1->tipo == 'f' && f1->tipo == 's') ||
-			(f1->tipo==f2->tipo && f1->prezzo<f2->prezzo)
-}
-
-void ordina(Nodo* head){
-	Nodo* inizio = head;
-	Nodo* minimo;
-	Nodo* nodo;
-	
 	if(head==NULL){
-		printf("La lista è vuota!\n")
-	} else{
-		for(inizio=head; inizio->next!=NULL; inizio=inizio->next){
-			minimo=inizio;
-			for(nodo=inizio->next; nodo!=NULL ; nodo=nodo->next){
-				if(precede(&nodo->f, &minimo->f)){
-					minimo=nodo;
+		head=nuovo;
+	} else {
+		Nodo* nodo = head;
+		while(nodo->next!=NULL){
+			nodo=nodo->next;
+		}
+		nodo->next=nuovo;
+	}
+	printf("Inserimento completato!\n\n");
+	return head;
+}
+
+/**********************************************
+ ********* ORDINAMENTO ************************
+ **********************************************/
+
+int condizione(Fritto* n1, Fritto* n2){
+	return ((n1->surgelato=='S' && n2->surgelato=='N') ||
+			(n1->prezzo>n2->prezzo));
+}
+
+void ordinaLista(Nodo* head){
+	if(head==NULL){
+		printf("Lista vuota!\n\n");
+	} else if(head->next==NULL){
+		printf("La listan non richiede ordinamento!\n\n");
+	} else {
+		Nodo *i, *y;
+		for(i=head;i->next!=NULL;i=i->next){
+			for(y=i;y!=NULL;y=y->next){
+				if(condizione(&i->f,&y->f)){
+					Fritto temp = y->f;
+					y->f = i->f;
+					i->f = temp;
 				}
 			}
-			temp = minimo->f;
-			minimo->f=inizio
 		}
 	}
 }
 
-int main(int argc, char **argv)
-{
-	Nodo* head = NULL;
-	
-	printf("Che operazione vuoi fare?\n");
-	
-	int risposta=-1;
-	while(risposta!=0){
-		printf("1 -> ");
-		printf("2 -> ");
-		printf("3 -> ");
-		printf("0 -> ");
-		scanf("%d%*c");
+/**********************************************
+ ************ FUNZIONE PRINCIPALE ************
+ **********************************************/
+
+int main() {
+	/* inizializza la lista */
+	Nodo* lista = NULL;
+
+	int risposta = -1;			// per interazione con utente
+
+	while(risposta != 0) {
+		/* richiedi un'operazione all'utente */
+		printf("Che operazione vuoi svolgere?\n");
+		printf("1 -> Inserisci un fritto\n");
+		printf("2 -> Ordina la lista\n");
+		printf("3 -> Visualizza la lista di triangoli\n");
+		printf("0 -> Termina il programma\n\n");
+		scanf("%d%*c", &risposta);
+		printf("\n");
+		/* gestisci le operazioni dell'utente */
+		if(risposta==1)
+			lista = inserisciFritto(lista);
+		else if(risposta==2)
+			ordinaLista(lista);
+		else if(risposta==3)
+			stampaLista(lista);
+		else if(risposta==0)
+			printf("Finito!\n\n");
+		else printf("Selezione non valida!\n\n");
 	}
-	
-	return 0;
 }

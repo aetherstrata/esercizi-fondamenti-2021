@@ -55,7 +55,7 @@
     <VirtualDirectory Name="Esercitazione 4">
       <Project Name="TriangoliEquilateri" Path="TriangoliEquilateri/TriangoliEquilateri.project" Active="No"/>
     </VirtualDirectory>
-    <Project Name="WorkPay" Path="WorkPay/WorkPay.project" Active="No"/>
+    <Project Name="WorkPay" Path="WorkPay/WorkPay.project" Active="Yes"/>
     <VirtualDirectory Name="Esercitazione 5">
       <Project Name="PuntiColorati" Path="PuntiColorati/PuntiColorati.project" Active="No"/>
     </VirtualDirectory>
@@ -64,7 +64,7 @@
     </VirtualDirectory>
     <VirtualDirectory Name="Esercitazione 7">
       <Project Name="EsattamenteDueSuTre" Path="EsattamenteDueSuTre/EsattamenteDueSuTre.project" Active="No"/>
-      <Project Name="Persone2" Path="Persone2/Persone2.project" Active="Yes"/>
+      <Project Name="Persone2" Path="Persone2/Persone2.project" Active="No"/>
     </VirtualDirectory>
   </VirtualDirectory>
   <BuildMatrix>
